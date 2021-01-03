@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% block title %}{% endblock %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header id="artboard-header" class="artboard-header">
+		
+        <nav class="artboard-header__navbar">
+            <div class="artboard-header__nav-content container">
+                <ul class="artboard-header__list">
+                    <li class="artboard-header__item"><a href="/about" class="artboard-header__link">Главная</a></li>
+                    <li class="artboard-header__item"><a href="/" class="artboard-header__link">Магазин</a></li>
+                    <li class="artboard-header__item"><a href="#footer" class="artboard-header__link">О нас</a></li>
+                    <li class="artboard-header__item"><a href="/create" class="artboard-header__link">Добавить</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="artboard-header__container container">
+            <div class="artboard-header__block">
+                <div class="artboard-header__art"><picture><source srcset="{{url_for('static', filename='img1.webp')}}" type="image/webp"><img src="{{url_for('static', filename='img1.jpg')}}" alt=""></picture></div>
+                <div class="artboard-header__art"><picture><source srcset="{{url_for('static', filename='img2.webp')}}" type="image/webp"><img src="{{url_for('static', filename='img2.jpg')}}" alt=""></picture></div>
+                <div class="artboard-header__art"><picture><source srcset="{{url_for('static', filename='img3.webp')}}" type="image/webp"><img src="{{url_for('static', filename='img3.jpg')}}" alt=""></picture></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="artboard-content">
+    	{% block body %}{% endblock %}
+    </div>
+
+    <footer class="artboard-footer" id="footer">
+        <div class="artboard-footer__container container">
+            <div class="artboard-footer__block">
+                <div class="artboard-footer__list">
+                    <div class="artboard-footer__item"><a href="#">Магазин</a></div>
+                    <div class="artboard-footer__item"><a href="#">О нас</a></div>
+                    <div class="artboard-footer__item"><a href="#">Контакты</a></div>
+                    <div class="artboard-footer__item"><a href="#">Мой GitHub</a></div>
+                </div>
+            </div>
+            <div class="artboard-footer__copy">Copyright 2021</div>
+        </div>
+        
+    </footer>
+
+</body>
+</html>

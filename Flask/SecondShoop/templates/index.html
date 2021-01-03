@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title>Main page</title>
+{% endblock %}
+
+{% block body %}
+	<div class="artboard-content__container container">
+		<h1 class="artboard-content__title">ЭТО НАШ МАГАЗИН!</h1>
+		<h2 class="artboard-content__subtitle">МАГАЗИН ОСТРЫХ КОЗЫРЬКОВ</h2>
+		<div class="artboard-content__block-shop">
+			{% for el in data %}
+				<div class="artboard-content__item">
+				<a href="#">
+					<div class="artboard-content__image">
+						<img src="img/img1.jpg" alt="">
+					</div>
+					<h2 class="artboard-content__name">{{ el.title }}</h2>
+					<h3 class="artboard-content__price">Price: {{ el.price }}$</h3>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

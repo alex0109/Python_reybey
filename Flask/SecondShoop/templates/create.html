@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title>Adding item</title>
+{% endblock %}
+
+{% block body %}
+	<div class="artboard-content__container container">
+        	<div class="artboard-content__block">
+        		<div class="artboard-content__title">Новый товар</div>
+        		<div class="artboard-content__subtitle">Здесь вы можете добавить новый товар</div>
+				<form method="post" class="artboard-content__adding-space">
+					
+						<p>Название товара</p><input type="text" placeholder="Введите название товара" name="title" id="title" class="artboard-content__input">
+					
+						<p>Стоимость</p><input type="number" placeholder="Введите стоимость товара" name="price" id="price" class="artboard-content__input">
+		
+					<button class="artboard-content__adding-space-btn" type="submit">Отправить</button>
+				</form>
+        	</div>
+        </div>
+{% endblock %}
